@@ -1,7 +1,78 @@
+* {
+    padding: 0;
+    margin: 0;
+}
 
-.black-row {
+#black-row {
     transform: rotate(-45deg);
     background-color: black;
+    height: 10vh;
+    position: relative;
+    top: 50vh;
+}
+
+.bball {
+    transform-origin: center;
+}
+
+#black-row .bball {
+    fill: red;
+    height: 10vh;
+    width: 10%;
+    position: relative;
+}
+
+.testbball {
     height: 100px;
-    width: 100%;
+    width: 100px;
+    position: relative;
+}
+
+.spin {
+    -webkit-animation: spin 3s infinite linear; 
+    -moz-animation:    spin 3s infinite linear; 
+    -o-animation:      spin 3s infinite linear; 
+    animation:         spin 3s infinite linear; 
+}
+
+.backspin {
+    -webkit-animation: spin 3s infinite linear reverse; 
+    -moz-animation:    spin 3s infinite linear reverse; 
+    -o-animation:      spin 3s infinite linear reverse; 
+    animation:         spin 3s infinite linear reverse;
+}
+
+.move {
+    -webkit-animation: move 3s infinite linear; 
+    -moz-animation:    move 3s infinite linear; 
+    -o-animation:      move 3s infinite linear; 
+    animation:         move 3s infinite linear;
+}
+
+@keyframes spin {
+    from {
+        transform: rotate(0);
+        /* translate(0 0 100% 0) */
+        /* left: 100%;
+        top: 0; */
+    }
+    to {
+        transform: rotate(360deg);
+        /* translate(100vh 0 0 0)  */
+        /* left: 0;
+        top: 100vh; */
+    }
+}
+
+@keyframes move {
+    from {
+        /* transform:translate(0, 0); */
+        left: 100%;
+        top: 0;
+    }
+    to {
+        /* transform:translate(2, 1); */
+        left: 0;
+        top: 100vh;
+    }
 }
