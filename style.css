@@ -1,0 +1,7 @@
+
+.black-row {
+    transform: rotate(-45deg);
+    background-color: black;
+    height: 100px;
+    width: 100%;
+}
